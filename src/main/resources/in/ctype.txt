@@ -1,0 +1,129 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.targetgroup.net/originations/external/schemas" xmlns:sch1="http://www.targetgroup.net/originations/common/schemas">
+   <soapenv:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <wsse:UsernameToken>
+                <wsse:Username>webserviceuser</wsse:Username>
+                <wsse:Password>webservicepassword</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+   <soapenv:Body>
+      <sch:CreateInvestmentsRequest version="1.0 Draft">
+          <sch:investmentApplication externalReference="ctype">
+            <sch1:applicationDate>2009-01-01</sch1:applicationDate>
+            <sch1:applicationType>S</sch1:applicationType>
+            <sch1:idChecksComplete>true</sch1:idChecksComplete>
+            <sch1:investor>I</sch1:investor>
+            <sch1:individualAndJointInvestorSubTypeEnum>C</sch1:individualAndJointInvestorSubTypeEnum>
+            <sch1:investmentType>C</sch1:investmentType>
+            <sch1:applicant>
+               <sch1:personalApplicant>
+                  <sch1:personalDetails>
+                     <sch1:title>Mr</sch1:title>
+                     <sch1:surname>Bloggs</sch1:surname>
+                     <sch1:forename>Joe</sch1:forename>
+                     <sch1:dateOfBirth>1950-01-01</sch1:dateOfBirth>
+                     <sch1:gender>MALE</sch1:gender>
+                     <sch1:placeOfBirth>Cardiff</sch1:placeOfBirth>
+                     <sch1:countryOfBirth>UK</sch1:countryOfBirth>
+                     <sch1:nationality>UK</sch1:nationality>
+                     <sch1:niNumber>AB123456A</sch1:niNumber>
+                  </sch1:personalDetails>
+                  <sch1:contactDetails>
+                     <sch1:address>
+                        <sch1:addressLine1>1</sch1:addressLine1>
+                        <sch1:addressLine2>Filton Grove</sch1:addressLine2>
+                        <sch1:addressLine3>Horfield</sch1:addressLine3>
+                        <sch1:addressLine4>Avon</sch1:addressLine4>
+                        <sch1:addressLine5>Bristol</sch1:addressLine5>
+                        <sch1:postCode>BS7 0AN</sch1:postCode>
+                     </sch1:address>
+                     <sch1:phoneNumber type="HOME">079 3412243</sch1:phoneNumber>
+                  </sch1:contactDetails>
+                  <sch1:ukTaxExempt>NO</sch1:ukTaxExempt>
+                  <sch1:taxPayableInOtherCountries>NO</sch1:taxPayableInOtherCountries>
+                  <sch1:usCitizen>YES</sch1:usCitizen>
+                  <sch1:foreignTaxReference>
+                     <sch1:country>US</sch1:country>
+                     <sch1:taxReferenceNumber>TAX123</sch1:taxReferenceNumber>
+                     <sch1:fatcaInformation>
+                        <sch1:fatcaCode>US</sch1:fatcaCode>
+                        <sch1:reviewStatus>1</sch1:reviewStatus>
+                     </sch1:fatcaInformation>
+                     <sch1:scfReceivedDate>2016-01-01</sch1:scfReceivedDate>
+                     <sch1:adeReceivedDate>2016-01-01</sch1:adeReceivedDate>
+                  </sch1:foreignTaxReference>
+               </sch1:personalApplicant>
+               <sch1:fscsInformation>
+                   <sch1:eligibleFscsEntity>YES</sch1:eligibleFscsEntity>
+                   <sch1:fscsReason>INDIVIDUAL</sch1:fscsReason>
+               </sch1:fscsInformation>
+            </sch1:applicant>
+            <sch1:thirdParty>
+               <sch1:thirdPartyDetails>
+                  <sch1:fullName>Master William Smith</sch1:fullName>
+                  <sch1:dateOfBirth>2016-01-01</sch1:dateOfBirth>
+                </sch1:thirdPartyDetails>
+                <sch1:thirdPartyType>BENEFICIAR</sch1:thirdPartyType>
+            </sch1:thirdParty>
+            <sch1:thirdParty>
+               <sch1:thirdPartyDetails>
+                  <sch1:fullName>Mr Santa Claus</sch1:fullName>
+                  <sch1:dateOfBirth>1950-01-01</sch1:dateOfBirth>
+                  <sch1:relationship>Father (Christmas)</sch1:relationship>
+                  <sch1:giftingConsent>true</sch1:giftingConsent>
+                </sch1:thirdPartyDetails>
+                <sch1:thirdPartyType>GIFTER</sch1:thirdPartyType>
+            </sch1:thirdParty>
+            <sch1:ifaDetails>
+                <sch1:investmentProcedure>Y</sch1:investmentProcedure>
+                <sch1:appropriateQuestionsAnswered>true</sch1:appropriateQuestionsAnswered>
+                <sch1:adviceGiven>true</sch1:adviceGiven>
+                <sch1:fsaIndividualNumber>AMT00033</sch1:fsaIndividualNumber>
+                <sch1:commissionPercentageRebate>3.00</sch1:commissionPercentageRebate>
+            </sch1:ifaDetails>
+            <sch1:feeArrangement>
+               <sch1:feesPaidToIFA>false</sch1:feesPaidToIFA>
+               <sch1:fees>
+                  <sch1:planName>GilliatIncomeBuilder</sch1:planName>
+                  <sch1:feeAsPercentage>10.00</sch1:feeAsPercentage>
+               </sch1:fees>
+            </sch1:feeArrangement>
+            <sch1:allowMarketing>true</sch1:allowMarketing>
+            <sch1:planReference>GilliatIncomeBuilder</sch1:planReference>
+            <sch1:investment>
+               <sch1:productCode>DIRECT</sch1:productCode>
+               <sch1:allocation>
+                  <sch1:instrumentReference>Instrument 1</sch1:instrumentReference>
+                  <sch1:amount currency="GBP">5000.00</sch1:amount>
+               </sch1:allocation>
+            </sch1:investment>
+            <sch1:investment>
+               <sch1:productCode>DIRECT</sch1:productCode>
+               <sch1:allocation>
+                  <sch1:instrumentReference>Instrument 1</sch1:instrumentReference>
+                  <sch1:amount currency="GBP">3000.00</sch1:amount>
+               </sch1:allocation>
+            </sch1:investment>
+            <sch1:incomeAndMaturityBankDetails>
+               <sch1:bankName>Natwest</sch1:bankName>
+               <sch1:sortCode>10-20-30</sch1:sortCode>
+               <sch1:accountNumber>12345678</sch1:accountNumber>
+               <sch1:accountName>Mr Joe Bloggs</sch1:accountName>
+            </sch1:incomeAndMaturityBankDetails>
+            <sch1:sourceOfFunds>
+                  <sch1:fund>Overseas money</sch1:fund>
+                  <sch1:wealth>OTH</sch1:wealth>
+                  <sch1:other>Overseas money</sch1:other>
+            </sch1:sourceOfFunds>
+            <sch1:checklistItems>
+               <sch1:applicationSigned>N</sch1:applicationSigned>
+               <sch1:amlChecksComplete>N</sch1:amlChecksComplete>
+               <sch1:pepChecksComplete>N</sch1:pepChecksComplete>
+               <sch1:sanctionChecksComplete>N</sch1:sanctionChecksComplete>
+               <sch1:advisorSigned>N</sch1:advisorSigned>
+            </sch1:checklistItems>
+         </sch:investmentApplication>
+      </sch:CreateInvestmentsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
